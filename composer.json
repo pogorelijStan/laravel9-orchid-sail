@@ -10,7 +10,8 @@
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.0",
         "laravel/telescope": "^4.14",
-        "laravel/tinker": "^2.7"
+        "laravel/tinker": "^2.7",
+        "orchid/platform": "^13.10"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
@@ -39,7 +40,8 @@
             "@php artisan package:discover --ansi"
         ],
         "post-update-cmd": [
-            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
+            "@php artisan orchid:publish --ansi"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
